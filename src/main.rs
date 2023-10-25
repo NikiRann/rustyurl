@@ -79,7 +79,7 @@ fn rocket() -> _ {
 
 fn db_connect() -> mongodb::sync::Database {
     let mut client_options =
-    ClientOptions::parse("mongodb+srv://admin:admin@cluster0.2otdo5j.mongodb.net/?retryWrites=true&w=majority").ok().unwrap();
+    ClientOptions::parse("").ok().unwrap();
     // Set the server_api field of the client_options object to Stable API version 1
     let server_api = ServerApi::builder().version(ServerApiVersion::V1).build();
     client_options.server_api = Some(server_api);
